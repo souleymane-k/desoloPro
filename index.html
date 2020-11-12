@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App Hack Capstone</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>All Marchandises Information at Your Fingers</h1>
+    <form id="js-form">
 
+        <label for="searc-term">Item or Company Name</label>
+        <input type="text" name="search-term" id="js-search-term" required>
+
+        <label for="max-results">Number of Results</label>
+        <input type="number" name="max-results" id="js-max-results" value="10">
+
+        <input type="submit" value="submit" class="click">
+    </form>
+    <div id="js-error-message"></div>
+    <section id="results" class="hidden">
+        <h2>Information Regards to Items and Companies</h2>
+        <ul id="results-list">
+        </ul>
+    </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,1 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+}
+.container{
+    text-align:center;
+    max-width: 800px;
+    max-height: 945px;
+    margin: 0 auto;
+}
 
+
+.hidden{
+    display:none;
+}
+.click{
+    background-color:orange;
+    color:white;
+    cursor:pointer;
+}
+
+/*
+#imgView{
+    max-width: 600px;
+    max-height: 500px;
+    margin: 0 auto;
+   border-image-repeat: none;
+   direction:flex;
+   flex-direction: column;
+}
+.click{
+    background-color:orange;
+    color:white;
+    cursor:pointer;
+}
+.error-message{
+    color:red;
+}
+.hidden{
+    display:none;
+}
+*/
