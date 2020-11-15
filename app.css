@@ -6,12 +6,22 @@ body{
 }
 h1{
     text-align: center;
+    background-color:darkgray;
+    color:white;
+    max-width: 800px;
+    height:auto;
+}
+#js-form{
+    width:800px;
+    height:auto; 
 }
 .container{
     text-align:center;
     max-width: 800px;
     max-height: 945px;
     margin: 0 auto;
+    direction:flex;
+    flex-direction: column;
 }
 
 
@@ -22,6 +32,15 @@ h1{
     background-color:orange;
     color:white;
     cursor:pointer;
+}
+.colorKo{
+    background-color:green;
+    
+}
+#type, #link{
+    background-color: darkseagreen;
+    padding:10px;
+    max-width: 800px;
 }
 
 /*
