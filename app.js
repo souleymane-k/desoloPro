@@ -18,10 +18,9 @@ function displayResults(responseJson){
     <hr>
     <div id="listing">
     <div id="title"><p>TITLE : ${responseJson.news[i].title}</p> </div>
-    <div id="description> DESCRIPTION: <p>${responseJson.news[i].description}</p></div> 
-    <div id="author"><p>AUTHOR NAME: ${responseJson.news[i].author}</p></div> 
+    <div id="description> <p> DESCRIPTION: ${responseJson.news[i].description}</p></div> 
     <img src="${responseJson.news[i].image}"> 
-    <p><a href="${responseJson.news[i].url}"> News Link </a></p>
+    <p>For more details click ==> <a href="${responseJson.news[i].url}"> News Link </a></p>
     </li>
     </div>
         `
@@ -64,10 +63,7 @@ function watchForm(){
     }
        $(watchForm);
 
-    //    <p>${responseJson.news[i].title}</p>
-    //    <p>${responseJson.news[i].description}</p>
-        
-    //    <p>${responseJson.news[i].author}</p>
+    
        
        
  

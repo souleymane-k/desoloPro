@@ -22,6 +22,7 @@ h1{
     margin: 0 auto;
     direction:flex;
     flex-direction: column;
+   
 }
 
 
@@ -56,6 +57,10 @@ h1{
     background-color:#A9A9A9;
     margin:10px;
     border:solid;
+    width:800px;
+    height:auto;
+    direction:flex;
+    flex-direction: column;
 }
 img{
     width: 200px;
