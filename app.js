@@ -10,17 +10,20 @@ function formatQueryParasms(parasms){
 }
 
 function displayResults(responseJson){
-    console.log(responseJson.news.length);
+    console.log(responseJson);
     $('#results-list').empty(); 
   for(let i=0; i<responseJson.news.length; i++){
         $('#results-list').append(
     `<li>
-       
-         <p>${responseJson.news[i].title}</p>
-         <p>${responseJson.news[i].author}</p>  
-         <p>${responseJson.news[i].description}</p>     
-         
+    <hr>
+    <div id="listing">
+    <div id="title"><p>TITLE : ${responseJson.news[i].title}</p> </div>
+    <div id="description> DESCRIPTION: <p>${responseJson.news[i].description}</p></div> 
+    <div id="author"><p>AUTHOR NAME: ${responseJson.news[i].author}</p></div> 
+    <img src="${responseJson.news[i].image}"> 
+    <p><a href="${responseJson.news[i].url}"> News Link </a></p>
     </li>
+    </div>
         `
       )
    };
@@ -67,6 +70,4 @@ function watchForm(){
     //    <p>${responseJson.news[i].author}</p>
        
        
-    //    <div> Wikepedia and YouTube Links </div>
-    //    <img src="${responseJson.news[i].image}" class="results-img">
-    //    <a href="${responseJson.news[i].url}">Wikepedia</a> <br> 
+ 

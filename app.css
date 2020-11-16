@@ -52,4 +52,23 @@ h1{
 .hidden{
     display:none;
 } 
+#listing{
+    background-color:#A9A9A9;
+    margin:10px;
+    border:solid;
+}
+img{
+    width: 200px;
+    height:auto;
+}
+#results{
+    max-width: 800px;
+    height:400px;  
+}
+#title {
+    color:white;
+}
+#author{
+    color:white;
+}
 
