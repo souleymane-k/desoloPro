@@ -1,7 +1,7 @@
 'use strick'
 
-const apikey = "5cf9dfd5-3449-485e-b5ae-70a60e997864";
-const searchURL = "https://api.covid19api.com/summary"
+const apikey = "T94milI-M0kEDXx9Stmi8fORc_GgbGcjReElzPc4odErui6e";
+const searchURL = "https://api.currentsapi.services/v1/search"
 
 function formatQueryParasms(parasms){
     const queryItems = Object.keys(parasms)
@@ -9,56 +9,42 @@ function formatQueryParasms(parasms){
     return queryItems.join('&');
 }
 
-/*function displayResults(responseJson){
-    console.log(responseJson);
-    $('#results-list').empty();
-    
-  for(let i=0; i<responseJson.Similar.Results.length; i++){
+function displayResults(responseJson){
+    console.log(responseJson.news.length);
+    $('#results-list').empty(); 
+  for(let i=0; i<responseJson.news.length; i++){
         $('#results-list').append(
-    `<li class="colorKo">
-    <hr>
-         <div id="type">
-         <p> Name and Type</p>
-         <p>${responseJson.Similar.Results[i].Name}</p>
-         <p>${responseJson.Similar.Results[i].Type}</p>
-          </div>
-          <div id="description">
-         <p>${responseJson.Similar.Results[i].wTeaser}</p>
-         </div>
-         <div id="link">
-         <div> Wikepedia and YouTube Links </div>
-         <a href="${responseJson.Similar.Results[i].wUrl}">Wikepedia</a> <br> 
-         <a href="${responseJson.Similar.Results[i].yUrl}">YouTube Video</a>
-         </div>
+    `<li>
+       
+         <p>${responseJson.news[i].title}</p>
+         <p>${responseJson.news[i].author}</p>  
+         <p>${responseJson.news[i].description}</p>     
+         
     </li>
         `
       )
    };
 
     $('#results').removeClass('hidden');
-}*/
+}
 
-function getInfos(query,limit){
+function getLatestNews(query, results=15){
     const parasms = {
-        api_key:apikey,
-        q:query,limit,
-        
-        
-        
+        q:query,results, 
+        apiKey:apikey 
     }
     
-
     const queryString = formatQueryParasms(parasms)
     const url = searchURL+'?'+queryString;
      console.log(url);
-     fetch('https://api.covid19api.com/summary?X-Access-Token=5cf9dfd5-3449-485e-b5ae-70a60e997864')
+     fetch(url)
      .then(response =>{
          if(response.ok){
              return response.json();
          }
          throw new Error(response.statusText);
      })
-     .then(responseJson => console.log(responseJson))
+     .then(responseJson => displayResults(responseJson))
      .catch(err => {
          $('#js-error-message').text(`Something went wrong: ${err.message}`);
      });
@@ -68,9 +54,19 @@ function watchForm(){
         event.preventDefault();
          const searchTerm = $('#js-search-term').val();
          const maxResults = $('#js-max-results').val();
-        getInfos(searchTerm, maxResults);
+        getLatestNews(searchTerm, maxResults);
         
     
       });
     }
        $(watchForm);
+
+    //    <p>${responseJson.news[i].title}</p>
+    //    <p>${responseJson.news[i].description}</p>
+        
+    //    <p>${responseJson.news[i].author}</p>
+       
+       
+    //    <div> Wikepedia and YouTube Links </div>
+    //    <img src="${responseJson.news[i].image}" class="results-img">
+    //    <a href="${responseJson.news[i].url}">Wikepedia</a> <br> 
