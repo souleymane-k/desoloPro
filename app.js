@@ -1,7 +1,7 @@
 'use strick'
 
 const apikey = "T94milI-M0kEDXx9Stmi8fORc_GgbGcjReElzPc4odErui6e";
-const searchURL = "https://api.currentsapi.services/v1/search/"
+const searchURL = "https://api.currentsapi.services/v1/search"
 
 function formatQueryParasms(parasms){
     const queryItems = Object.keys(parasms)
@@ -16,13 +16,14 @@ function displayResults(responseJson){
         $('#results-list').append(
     `<li>
     <div id="listing">
-    <div id="title"><p>TITLE : ${responseJson.news[i].title}</p> </div>
-    <div id="description> <p> DESCRIPTION: ${responseJson.news[i].description}</p></div> 
+    <div id="title"><p>TITLE : ${responseJson.news[i].title}.</p> </div>
+    <div><p>Description:  ${responseJson.news[i].description}</p></div> 
     <img src="${responseJson.news[i].image}"> 
-    <p>For more details click ==> <a href="${responseJson.news[i].url}"> News Link </a></p>
+    <p class="detailsClick">For more details click ==> <a href="${responseJson.news[i].url}"> News Link </a></p>
     </li>
-    </div>
     <hr>
+    </div>
+   
         `
       )
    };
@@ -32,10 +33,10 @@ function displayResults(responseJson){
 
 function getLatestNews(query, results=15){
     const parasms = {
-        q:query,results, 
-        apiKey:apikey 
+        apiKey:apikey,
+        q:query,
+        results      
     }
-    
     const queryString = formatQueryParasms(parasms)
     const url = searchURL+'?'+queryString;
      console.log(url);
@@ -62,6 +63,8 @@ function watchForm(){
       });
     }
        $(watchForm);
+
+       /*<div id="author"><p>Author:  ${responseJson.news[i].author}</p></div>*/
 
     
        
