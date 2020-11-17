@@ -19,7 +19,7 @@ function displayResults(responseJson){
     <div id="title"><p>TITLE : ${responseJson.news[i].title}.</p> </div>
     <div><p>Description:  ${responseJson.news[i].description}</p></div> 
     <img src="${responseJson.news[i].image}"> 
-    <p class="detailsClick">For more details click ==> <a href="${responseJson.news[i].url}"> News Link </a></p>
+    <p class="detailsClick">For more details click ==> <a href="${responseJson.news[i].url}" target="_blank"> News Link </a></p>
     </li>
     <hr>
     </div>

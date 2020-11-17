@@ -3,7 +3,7 @@
 }
 body{
     font-family: sans-serif;
-    background-color:#979494;
+    background-color:#ECECEC;
 }
 h1{
     /*text-align: center;*/
@@ -15,11 +15,11 @@ h1{
     height:70px;
     padding:10px;
 }
-#js-form{
-    width:800px;
-    height:auto; 
-   margin-top: 60px;
-   color:white;
+ #js-form{ 
+    /*width:800px;
+    height:auto;*/ 
+    margin-top: 60px;
+    color:white;
     
 }
 .container{
@@ -29,12 +29,12 @@ h1{
     background-color:darkgray;
     margin: 0 auto;
     direction:flex;
-    flex-direction: column;
+    flex-direction: column; 
     border:solid;
     border-radius:10px;
     border:2px;
     border:solid;
-    box-shadow: 3px 3px 3px 3px white;
+    box-shadow: 3px 3px 3px 3px lightblue;
    
 }
 #listing{
@@ -48,6 +48,7 @@ h1{
     border:solid;
     max-width: 800px;
     height:auto; 
+    left:0;
     transition: width height background-color 1s; 
      
 }
@@ -61,7 +62,7 @@ h1{
 
 
 .click{
-    background-color:orange;
+    background-color:black;
     color:white;
     cursor:pointer;
 }
@@ -98,13 +99,18 @@ a{
     color:white;
     border-radius:5px;
     width:50px;
+    animation: myanimation 5s; 
+}
+@keyframes myanimation{
+    from{background:green}
+    to{background:black}
 }
 #results{
     direction:flex;
     flex-direction: column;
     width: 800px;
     height:400px;
-    margin-left: 200px;;  
+    margin-left: -35px;;  
 }
 #title {
     color:white;
@@ -117,6 +123,8 @@ a{
 #results-list{
     list-style-type: none;
     margin-left: auto;
+    direction:flex;
+    flex-direction:column;
 }
 hr{
     height:10px;
@@ -132,5 +140,6 @@ hr{
     text-align: center;
     font-family: cursive;
     font-size: 25px;
+    margin-left:0;   
 }
 
