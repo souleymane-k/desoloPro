@@ -1,1 +1,1 @@
-# desoloPro
+# desoloPro is an App that allows users to have access to the most 30 news in the world. They can navigate through the news by checking on the title, the description, and the picture for more illustration. Once, they are interested in given news, they can click on the indicated button to have access to the original news. In conclusion, this is a short cut to have a better overview of the news world in a simple click. This is why we say the slogan: Be in touch anywhere and anytime
