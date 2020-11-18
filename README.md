@@ -1,5 +1,4 @@
-# desoloPro                desoloPro
-
+# desoloPro
 desolopro
 News driven community with the need to be informed. This app helps individuals to be aware about what is going on in the world. Be in touch anywhere anytime.
 Motivation
@@ -29,6 +28,4 @@ Demo
 •	Live Demo
 Author
 •	Souleymane Kone - Database design/Back-End development
-
-
 

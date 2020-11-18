@@ -1,13 +1,14 @@
 'use strick'
 
 const apikey = "T94milI-M0kEDXx9Stmi8fORc_GgbGcjReElzPc4odErui6e";
-const searchURL = "https://api.currentsapi.services/v1/search"
+const searchURL = "https://api.currentsapi.services/v1/latest-news"
 
 function formatQueryParasms(parasms){
     const queryItems = Object.keys(parasms)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(parasms[key])}`)
     return queryItems.join('&');
 }
+/**Function Display--- ------------------- */
 
 function displayResults(responseJson){
     console.log(responseJson);
@@ -30,12 +31,11 @@ function displayResults(responseJson){
 
     $('#results').removeClass('hidden');
 }
-
-function getLatestNews(query, results=15){
+/**  Function -News and the query parasms and the fetch-- ------------------- */
+function getLatestNews(languages, results){
     const parasms = {
         apiKey:apikey,
-        q:query,
-        results      
+        q:languages,results,      
     }
     const queryString = formatQueryParasms(parasms)
     const url = searchURL+'?'+queryString;
@@ -52,19 +52,18 @@ function getLatestNews(query, results=15){
          $('#js-error-message').text(`Something went wrong: ${err.message}`);
      });
 }
+/**---------------Function watchform--- ------------------- */
 function watchForm(){
     $('form').submit(event => {
         event.preventDefault();
-         const searchTerm = $('#js-search-term').val();
+         const searchTerm = $('#js-search-term').val(' ');
          const maxResults = $('#js-max-results').val();
-        getLatestNews(searchTerm, maxResults);
+         getLatestNews(searchTerm, maxResults);
         
     
       });
     }
-       $(watchForm);
-
-       /*<div id="author"><p>Author:  ${responseJson.news[i].author}</p></div>*/
+    $(watchForm);
 
     
        

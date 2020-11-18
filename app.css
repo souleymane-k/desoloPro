@@ -5,8 +5,9 @@ body{
     font-family: sans-serif;
     background-color:#ECECEC;
 }
+/* ------------H1--And Form ---------------*/
 h1{
-    /*text-align: center;*/
+    
     background-color:red;
     color:white;
     max-width: 1000px;
@@ -16,12 +17,12 @@ h1{
     padding:10px;
 }
  #js-form{ 
-    /*width:800px;
-    height:auto;*/ 
+    
     margin-top: 60px;
     color:white;
     
 }
+/* -------Container and the list items with Hover key and animation---------*/
 .container{
     text-align:center;
     max-width: 800px;
@@ -59,23 +60,13 @@ h1{
 }
 
 
+/* -----------Button Click-----------------*/
 
 
-.click{
-    background-color:black;
-    color:white;
-    cursor:pointer;
-}
 .colorKo{
     background-color:green;
     
 }
-/* #type, #link{
-    background-color: darkseagreen;
-    padding:10px;
-    max-width: 800px;
-} */
-
 
 .click{
     background-color:orange;
@@ -93,6 +84,7 @@ img{
     width: 150px;
     height:70pxpx;
 }
+/*----------Anchor a with animation---------------*/
 a{
     border: red solid;
     background-color:green;
@@ -105,6 +97,7 @@ a{
     from{background:green}
     to{background:black}
 }
+/* --------Results section---------------*/
 #results{
     direction:flex;
     flex-direction: column;
@@ -126,6 +119,7 @@ a{
     direction:flex;
     flex-direction:column;
 }
+/*  Horizaontal Ruler-------------------*/
 hr{
     height:10px;
     background-color:black;
