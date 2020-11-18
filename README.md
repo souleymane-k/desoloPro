@@ -1,1 +1,34 @@
-# desoloPro is an App that allows users to have access to the most 30 news in the world. They can navigate through the news by checking on the title, the description, and the picture for more illustration. Once, they are interested in given news, they can click on the indicated button to have access to the original news. In conclusion, this is a short cut to have a better overview of the news world in a simple click. This is why we say the slogan: Be in touch anywhere and anytime
+# desoloPro                desoloPro
+
+desolopro
+News driven community with the need to be informed. This app helps individuals to be aware about what is going on in the world. Be in touch anywhere anytime.
+Motivation
+I want individuals to have an overview of fresh news at the fingers. Users can navigate through the app and explore more news based on their needs.
+Build Status
+Screenshots
+ 
+
+Environment Setup
+1.	access  30 fresh news
+2.	Run the app to display the 30 news 
+3.	Ability to navigate through 30 fresh news
+4.	Explore in depth news  by directing the users to the original source. 
+
+
+
+Response Sample:
+ 
+
+Built With
+Html, CSS, javaScript, and jQuery
+Features
+•	Inout  word news and order and display of 30 fresh news
+•	Navigate through the news
+•	Different color animation
+Demo
+•	Live Demo
+Author
+•	Souleymane Kone - Database design/Back-End development
+
+
+
