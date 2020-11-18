@@ -8,6 +8,7 @@ function formatQueryParasms(parasms){
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(parasms[key])}`)
     return queryItems.join('&');
 }
+/**Function Display--- ------------------- */
 
 function displayResults(responseJson){
     console.log(responseJson);
@@ -30,7 +31,7 @@ function displayResults(responseJson){
 
     $('#results').removeClass('hidden');
 }
-
+/**  Function -News and the query parasms and the fetch-- ------------------- */
 function getLatestNews(query, results=15){
     const parasms = {
         apiKey:apikey,
@@ -52,6 +53,7 @@ function getLatestNews(query, results=15){
          $('#js-error-message').text(`Something went wrong: ${err.message}`);
      });
 }
+/**---------------Function watchform--- ------------------- */
 function watchForm(){
     $('form').submit(event => {
         event.preventDefault();
@@ -64,7 +66,6 @@ function watchForm(){
     }
        $(watchForm);
 
-       /*<div id="author"><p>Author:  ${responseJson.news[i].author}</p></div>*/
 
     
        
