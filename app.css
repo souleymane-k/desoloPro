@@ -119,21 +119,28 @@ a{
     direction:flex;
     flex-direction:column;
 }
-/*  Horizaontal Ruler-------------------*/
+/* --- Horizaontal Ruler-------------------*/
 hr{
     height:10px;
     background-color:black;
     width:700px;
     margin: 30px;
-    /*margin-left:-38px;*/
-    
-    
+    /*margin-left:-38px;*/   
 
+}
+#js-max-results{
+    color:red;
+}
+#js-search-term{
+    color:red;
 }
 #resultsCheck{
     text-align: center;
     font-family: cursive;
     font-size: 25px;
     margin-left:0;   
+}
+form > label{
+color:black;
 }
 

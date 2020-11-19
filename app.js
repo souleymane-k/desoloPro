@@ -8,34 +8,34 @@ function formatQueryParasms(parasms){
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(parasms[key])}`)
     return queryItems.join('&');
 }
-/**Function Display--- ------------------- */
+/**----------Function Display--- ------------------- */
 
 function displayResults(responseJson){
     console.log(responseJson);
     $('#results-list').empty(); 
-  for(let i=0; i<responseJson.news.length; i++){
+    for(let i=0; i<responseJson.news.length; i++){
         $('#results-list').append(
-    `<li>
-    <div id="listing">
-    <div id="title"><p>TITLE : ${responseJson.news[i].title}.</p> </div>
-    <div><p>Description:  ${responseJson.news[i].description}</p></div> 
-    <img src="${responseJson.news[i].image}"> 
-    <p class="detailsClick">For more details click ==> <a href="${responseJson.news[i].url}" target="_blank"> News Link </a></p>
-    </li>
-    <hr>
-    </div>
+         `<li>
+          <div id="listing">
+          <div id="title"><p>TITLE : ${responseJson.news[i].title}.</p> </div>
+          <div><p>Description:  ${responseJson.news[i].description}</p></div> 
+          <img src="${responseJson.news[i].image}"> 
+          <p class="detailsClick">For more details click ==> <a href="${responseJson.news[i].url}" target="_blank"> News Link </a></p>
+           </li>
+          <hr>
+           </div>
    
-        `
-      )
+           `
+        )
    };
 
     $('#results').removeClass('hidden');
 }
 /**  Function -News and the query parasms and the fetch-- ------------------- */
-function getLatestNews(languages, results){
+function getLatestNews(language){
     const parasms = {
         apiKey:apikey,
-        q:languages,results,      
+        q:language     
     }
     const queryString = formatQueryParasms(parasms)
     const url = searchURL+'?'+queryString;
@@ -56,13 +56,13 @@ function getLatestNews(languages, results){
 function watchForm(){
     $('form').submit(event => {
         event.preventDefault();
-         const searchTerm = $('#js-search-term').val(' ');
+         const searchTerm = $('#js-search-term').val();
          const maxResults = $('#js-max-results').val();
          getLatestNews(searchTerm, maxResults);
         
     
       });
-    }
+}
     $(watchForm);
 
     
