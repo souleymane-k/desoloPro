@@ -1,62 +1,93 @@
 *{
-    box-sizing: border-box;
-}
-body{
+    box-sizing: border-box; 
+} 
+ body{
     font-family: sans-serif;
-    background-color:#ECECEC;
-}
+    background-color:#ECECEC; 
+} 
 /* ------------H1--And Form ---------------*/
-h1{
-    
-    background-color:red;
+div h1{ 
+    text-align: center; 
+    background-color:red; 
     color:white;
     max-width: 1000px;
-    height:auto;
+    height:150px;
     border-radius:10px;
     height:70px;
     padding:10px;
 }
  #js-form{ 
-    
+    padding:10px;
     margin-top: 60px;
-    color:white;
-    
+    color:white;   
 }
+h2,p{
+    text-align:left;
+}
+/* --------Results section---------------*/
+#results{
+    direction:flex;
+    flex-direction: column; 
+    text-align:left;
+    width: 1000px;
+    height:400px;
+    margin-top:100px;
+    margin-left:5px; 
+    text-align: center;
+}
+
 /* -------Container and the list items with Hover key and animation---------*/
 .container{
     text-align:center;
-    max-width: 800px;
-    height:200px;
+    max-width: 80%;
+    height:300px;
     background-color:darkgray;
     margin: 0 auto;
     direction:flex;
     flex-direction: column; 
-    border:solid;
+     border:solid;
     border-radius:10px;
     border:2px;
-    border:solid;
-    box-shadow: 3px 3px 3px 3px lightblue;
+    padding:10px;
+    /* border:solid; */
+     box-shadow: 3px 3px 3px 3px lightblue; 
    
 }
-#listing{
+
+ul li{
     direction:flex;
-    flex-direction: column;
+    flex-direction: column; 
     background-color:#A9A9A9;
     padding:10px;
     border-radius:10px;
     border:2px;
-    box-shadow: 3px 3px 3px 3px white;
+    box-shadow: 3px 3px 3px 3px white; 
     border:solid;
-    max-width: 800px;
+    max-width: 90%;
     height:auto; 
-    left:0;
+    margin-left:0px;
     transition: width height background-color 1s; 
-     
+      
 }
-#listing:hover{
-    width:1000px;
+
+ ul li:hover{
+    width:auto;
     height: auto;
     background-color:green;
+} 
+
+#results-list{
+     background-color:#A9A9A9; 
+     list-style-type: none; 
+     margin-left:0;
+     direction:flex;
+     flex-direction:column; 
+}
+
+section{
+    direction:flex;
+    flex-direction:column;
+    margin-left:-5px;
 }
 
 
@@ -72,6 +103,7 @@ h1{
     background-color:orange;
     color:white;
     cursor:pointer;
+    margin-top:20px;
 }
 .error-message{
     color:red;
@@ -97,14 +129,7 @@ a{
     from{background:green}
     to{background:black}
 }
-/* --------Results section---------------*/
-#results{
-    direction:flex;
-    flex-direction: column;
-    width: 800px;
-    height:400px;
-    margin-left: -35px;;  
-}
+
 #title {
     color:white;
     font-weight: 70px;
@@ -113,21 +138,66 @@ a{
     color:white;
    
 }
-#results-list{
-    list-style-type: none;
-    margin-left: auto;
-    direction:flex;
-    flex-direction:column;
-}
-/* --- Horizaontal Ruler-------------------*/
-hr{
-    height:10px;
-    background-color:black;
-    width:700px;
-    margin: 30px;
-    /*margin-left:-38px;*/   
 
-}
+/* ---------------------media query---------------------------- */
+ @media all and (min-width: 800px) {
+    
+    .container {
+      width: 80%;
+      margin: auto;
+      direction:flex;
+      flex-direction: row;
+    } 
+    
+     .results{
+        width:800px;
+        direction:flex;
+        flex-direction: row; 
+        text-align: center;
+        direction:flex;
+    } 
+    #results-list{
+        width: 1000px;
+        margin: auto;
+        /* left:150px; */
+        direction:flex;
+        flex-direction: row;
+    } 
+     #resultsCheck{
+        text-align: center;
+        flex-direction: row;
+    }
+
+    body{
+        background-color:orange;
+    }
+    h2,p{
+        text-align:center;
+    }
+    h1{
+        text-align:center;
+    }
+    #js-form{
+        text-align:center;
+    }
+  }
+  /* @media all and (min-width:480px) {
+    body {
+       background-color:orange; */
+      /* style is appended and/or overrided when the screen gets larger */
+     /* }
+  } */
+    
+/* --- Horizaontal Ruler-------------------*/
+
+/* hr {
+    width: 420px;
+    height: 32px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  } */
+  
 #js-max-results{
     color:red;
 }
@@ -141,6 +211,10 @@ hr{
     margin-left:0;   
 }
 form > label{
-color:black;
+color:white;
+background-color:red;
+width:200px;
+border-radius:50%;
+height:auto;
 }
 
