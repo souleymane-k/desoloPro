@@ -10,30 +10,39 @@
 <body>
   <!--Container-->
     <div class="container">
-          <h1> Retrieve The 30 Latest News</h1>
+          <div class="htitle">
+            <h1> Retrieve The 30 Latest News in Your Prefered Language</h1>
+          </div>
+
+          <!-- <div class="languages"> Pick a Language Code: <p>
+            
+            "Arabic": "ar"|  |"Chinese": "zh"|   |"Dutch": "nl"|"English": "en"|"Finnish": "fi"|<br>"French": "fr"|"German": "de"|"Hindi": "hi"|"Italian": "it"|"Japanese": "ja"|"Korean": "ko"|<br>"Malay": "msa"|"Portuguese": "pt"|"Russian": "ru"|"Spanish": "es"</p>
+             For Instance "Arabic": "ar", Enter ar without the double quote.
+          
+          </div> -->
            <!--Form-->
            <form id="js-form">
+            <p><label for="js-search-term">Enter Language Code : 
+              </label></p>
+            <p>For Instance "French": enter fr: <br><input type="text" name="search-term" id="js-search-term" placeholder='Arabic": ar|  |"Chinese": zh| |"Dutch": nl||"English": en||"Finnish": fi||"French": fr||"German": de||"Hindi": hi| |"Italian": it||"Japanese": ja||"Korean": ko||"Malay": msa| |"Portuguese": pt| |"Russian": ru|"Spanish":es ' required></p>
 
-            <label for="js-search-term">Write News</label>
-            <input type="text" name="search-term" id="js-search-term" required>
-
-           <label for="js-max-results">Max results</label>
-           <input type="number" name="max-results" id="js-max-results" value="5">
+           <!-- <label for="js-max-results">Max results</label>
+           <input type="number" name="max-results" id="js-max-results" value="5"> -->
 
            <button type="submit" value="submit" class="click"> Submit</button>
            </form>
+          </div>
             <!--Error Message-->
          <div id="js-error-message"></div> 
           <!--Display Results section-->
         <section id="results" class="hidden">
-          <div id="resultsCheck">
+          <!-- <div id="resultsCheck">
             <h2>Check Your results</h2>
             <p>Be In Touch With the World Anytime Anywhere</p>
-           </div>
+           </div> -->
             <!--The listing section-->
-          <ul  id="results-list"> </ul>
+          <div  id="results-list"> </div>
         </section>
-    </div> 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="app.js"></script>
     <!--lang="en"-->

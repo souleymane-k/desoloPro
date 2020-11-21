@@ -15,16 +15,15 @@ function displayResults(responseJson){
     $('#results-list').empty(); 
     for(let i=0; i<responseJson.news.length; i++){
         $('#results-list').append(
-         `<li>
+         `
           <div id="listing">
+          <img src="${responseJson.news[i].image}">
           <div id="title"><p>TITLE : ${responseJson.news[i].title}.</p> </div>
           <div><p>Description:  ${responseJson.news[i].description}</p></div> 
-          <img src="${responseJson.news[i].image}"> 
-          <p class="detailsClick">For more details click ==> <a href="${responseJson.news[i].url}" target="_blank"> News Link </a></p>
-           </li>
+          <p class="detailsClick"> <a href="${responseJson.news[i].url}" target="_blank"> News Link </a></p>
           <hr>
            </div>
-   
+        
            `
         )
    };
@@ -32,10 +31,11 @@ function displayResults(responseJson){
     $('#results').removeClass('hidden');
 }
 /**  Function -News and the query parasms and the fetch-- ------------------- */
-function getLatestNews(language){
+function getLatestNews(fr){
     const parasms = {
+        language:fr, 
         apiKey:apikey,
-        q:language     
+           
     }
     const queryString = formatQueryParasms(parasms)
     const url = searchURL+'?'+queryString;
@@ -57,8 +57,8 @@ function watchForm(){
     $('form').submit(event => {
         event.preventDefault();
          const searchTerm = $('#js-search-term').val();
-         const maxResults = $('#js-max-results').val();
-         getLatestNews(searchTerm, maxResults);
+        //  const maxResults = $('#js-max-results').val();
+         getLatestNews(searchTerm);
         
     
       });
