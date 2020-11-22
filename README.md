@@ -1,8 +1,8 @@
 # desoloPro
 desolopro
-News driven community with the need to be informed. This app helps individuals to be aware about what is going on in the world. Be in touch anywhere anytime.
+News driven community with the need to be informed. This app helps individuals to be aware about what is going on in the world. Be in touch anywhere anytime. Users can retrieve news worldwide based on their preferred language.
 Motivation
-I want individuals to have an overview of fresh news at the fingers. Users can navigate through the app and explore more news based on their needs.
+I want individuals to have an overview of fresh news at the fingers in a desired language. Users can navigate through the app and explore more news based on their needs.
 Build Status
 Screenshots
  

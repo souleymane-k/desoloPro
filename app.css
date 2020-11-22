@@ -32,14 +32,14 @@ h2,p{
     text-align:left;
 }
 /* --------Results section---------------*/
-#results{
+/* #results{
     flex-direction: column; 
     max-width: 445px;
     height:500px;
     margin-top:100px;
     margin-left:55px; 
     text-align: center;
-} 
+}  */
 
 /* -------Container and the list items with Hover key and animation---------*/
 .container{
@@ -79,7 +79,7 @@ input{
     max-width: 445px;
     height:auto; 
     margin-top:20px;
-    margin-left: -20px;
+    margin-left: 35px;
     transition: width height background-color 1s; 
       
 }
@@ -165,12 +165,12 @@ a{
       direction:flex;
       flex-direction: row;
     } 
-    #results{
+    /* #results{
         direction:row;
         flex-wrap: wrap;
         justify-content: space-between;
         width:auto;
-      }
+      } */
       
       
     #listing{
@@ -185,7 +185,7 @@ a{
     #results-list{
         background-color:#A9A9A9; 
         /* list-style-type: none;  */
-        margin-left:0;
+        margin-left:40px;
         display:flex;
         flex-direction:row; 
    }
@@ -232,9 +232,10 @@ a{
         text-align: center; */
       /* }  */
     #results-list{
+        margin-left:100px;
         width: 1000px;
         margin: auto;
-        direction:flex;
+        display:flex;
         flex-direction: row;
     } 
     #resultsCheck{
