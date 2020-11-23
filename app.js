@@ -17,7 +17,7 @@ function displayResults(responseJson){
         $('#results-list').append(
          `
           <div id="listing">
-          <img src="${responseJson.news[i].image}">
+          <img src="${responseJson.news[i].image}" alt="${name}">
           <div id="title"><p>TITLE : ${responseJson.news[i].title}.</p> </div>
           <div><p>Description:  ${responseJson.news[i].description}</p></div> 
           <p class="detailsClick"> <a href="${responseJson.news[i].url}" target="_blank"> News Link </a></p>

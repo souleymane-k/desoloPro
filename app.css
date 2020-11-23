@@ -117,8 +117,8 @@ input{
 } 
 
 img{
-    width: 250px;
-    height:150px;
+    width:440px;
+    height:200px;
 }
 /*----------Anchor a with animation---------------*/
 a{
@@ -141,6 +141,15 @@ a{
     color:white;
    
 }
+.group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .item {
+      flex:1;
+    margin: 10px;
+  }
 
 /* ---------------------media query---------------------------- */
  @media all and (min-width: 680px) {
@@ -157,20 +166,38 @@ a{
         justify-content: space-between;
         width:auto;
       } */
-      
+      .group {
+        display: flex;
+        flex-direction: row; 
+        flex-flow:row;
+        margin-top:50px;
+        justify-content:center;
+
+      }
+      .item {
+        flex:1;
+        flex-grow:1;
+        margin: 10px;
+        width:32%;
+        margin-top:50px;
+        padding-bottom:32%;
+        margin-bottom:2%;
+        position:relative;
+      }
       
     #listing{
       display:block;
       margin:10px;
       background-color: gray;
       padding: 2px;
-      height:500px;
+      height:auto;
       width:400px;
     
     }
     #results-list{
         background-color:#A9A9A9; 
         /* list-style-type: none;  */
+        margin-top:40px;
         margin-left:40px;
         display:flex;
         flex-direction:row; 
@@ -195,6 +222,9 @@ a{
     .htitle{
         margin-left:25px;
         height:200px;
+    }
+    img{
+        width:auto;
     }
 
    /* #results{
@@ -225,7 +255,7 @@ a{
         flex-direction: row;
     } 
     #resultsCheck{
-        margin-top:10px;
+        margin-top: 5px;
         margin-bottom: 20px;
         text-align: center;
         flex-direction: row;
