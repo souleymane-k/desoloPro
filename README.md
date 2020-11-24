@@ -27,5 +27,5 @@ Features
 Demo
 •	Live Demo
 Author
-•	Souleymane Kone - Database design/Back-End development
+•	Souleymane Kone - 
 
