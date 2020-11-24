@@ -32,60 +32,49 @@ h1{
 .container{
     text-align:center;
     max-width: 445px;
-    height:500px;
+    height:350px;
     background-color:darkgray;
     margin: 0 auto;
+    margin-bottom: 20px;
     display:flex;
-    flex-direction: column; 
-    border:solid;
+     flex-direction: column; 
+    /*border:solid; */
     border-radius:10px;
     border:2px;
     padding:10px;
-    /* border:solid; */
      box-shadow: 3px 3px 3px 3px lightblue; 
    
 }
-input{
-    margin-top:20px;
-    /* margin-left:30px; */
-    max-width:445px;
-}
 
-#results-list{
-    display:flex; 
+
+.group {
+    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    /* flex-wrap:wrap; */
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    align-content: center;
+    margin-bottom: 100px;
+  }
+.item{
+    display:flex; 
+    flex-grow: 1;
+    flex-direction: row; 
+    flex-wrap: wrap; 
     background-color:#A9A9A9;
     padding:10px;
     border-radius:10px;
     border:2px;
-    box-shadow: 3px 3px 3px 3px white; 
-    border:solid;
-    max-width: 445px;
+    /* box-shadow: 3px 3px 3px 3px white;  */
+     /* border:solid; */
+    /* max-width: 445px;
     height:auto; 
     margin-top:20px;
-    margin-left: 35px;
-    transition: width height background-color 1s; 
+    margin-left: 35px;  */
       
 }
 
 
- 
-
-/* #results-list{
-     background-color:#A9A9A9; 
-     list-style-type: none; 
-     margin-left:0;
-     flex-direction:column; 
-} */
-
-/* section{
-    display:flex;
-    flex-direction:column; 
-
-}*/
 
 
 /* -----------Button Click-----------------*/
@@ -105,7 +94,7 @@ input{
     text-transform: uppercase;
     font-size:18px;
     font-weight: 500px;
-    width:400px;
+    width:100%;
     height:55px;
     border-radius: 10px;
 }
@@ -117,22 +106,21 @@ input{
 } 
 
 img{
-    width:440px;
-    height:200px;
+
+    width:100%;
+    height:auto;
+    
 }
 /*----------Anchor a with animation---------------*/
 a{
-    border: red solid;
-    background-color:green;
+    
+    background-color:black;
     color:white;
-    border-radius:5px;
-    width:50px;
-    animation: myanimation 5s; 
+    max-width:100%;
+    height: 50px;
+    
 }
-@keyframes myanimation{
-    from{background:green}
-    to{background:black}
-}
+
 #title {
     color:white;
     font-weight: 70px;
@@ -141,15 +129,36 @@ a{
     color:white;
    
 }
-.group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
-  }
-  .item {
-      flex:1;
-    margin: 10px;
-  }
+
+  /* --- Horizaontal Ruler-------------------*/
+
+ hr {
+    max-width: 300px;
+    height: 5px;
+    border: solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background:black;
+  } 
+  
+#js-search-term{
+    color:black;
+    width:100%;
+    height:40px;
+    border-radius:10px;
+}
+#resultsCheck{
+    text-align: center;
+    font-family: cursive;
+    font-size: 25px;
+    margin-left:40px;   
+}
+label{
+color:black;
+height:auto;
+text-align: center;
+}
+
 
 /* ---------------------media query---------------------------- */
  @media all and (min-width: 680px) {
@@ -159,110 +168,82 @@ a{
       margin: auto;
       direction:flex;
       flex-direction: row;
+      height:500px;
     } 
-    /* #results{
-        direction:row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width:auto;
-      } */
-      .group {
-        display: flex;
-        flex-direction: row; 
-        flex-flow:row;
-        margin-top:50px;
-        justify-content:center;
 
-      }
-      .item {
-        flex:1;
-        flex-grow:1;
-        margin: 10px;
-        width:32%;
-        margin-top:50px;
-        padding-bottom:32%;
-        margin-bottom:2%;
-        position:relative;
-      }
-      
-    #listing{
-      display:block;
-      margin:10px;
-      background-color: gray;
-      padding: 2px;
-      height:auto;
-      width:400px;
-    
-    }
-    #results-list{
-        background-color:#A9A9A9; 
-        /* list-style-type: none;  */
+       .group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+        align-items: flex-start;
+        margin:auto;
         margin-top:40px;
-        margin-left:40px;
-        display:flex;
-        flex-direction:row; 
-   }
-   input{
-    margin-top:10px; 
-     margin-left:200px; 
-    /* max-width:445px;*/
-}
+        max-width: 1000px;
+    
+
+      } 
+     .item {
+        flex-grow: 1;
+        align-self:center;
+        flex-wrap: wrap;
+    
+      }  
+      hr{
+          width:500px;
+          margin:20px;
+          color:black;
+      }
+    
+
+   #js-search-term{
+     margin-top:40px; 
+     margin-left:40px; 
+     width: 200px;
+    }
     .click{
-        
+        text-align:text;
         padding-bottom: 10px;
         margin-top:20px;
-        margin-left:200px;
+        /* margin-left:200px; */
         /* text-transform: uppercase; */
         font-size:40px;
-        font-weight: 500px;
-        width:400px;
+        font-weight: 300px;
+        width: 400px;
         height:55px;
         border-radius: 10px;
     }
+    #js-search-term{
+        color:black;
+        width:100%;
+        height:55px;
+        border-radius:10px;
+        text-align: center;
+        margin-left:70px;
+
+    }
+
+    hr{
+        width:100%;
+    }
+
     .htitle{
         margin-left:25px;
         height:200px;
     }
     img{
-        width:auto;
+        width:100%;
+        height:400px;
     }
 
-   /* #results{
-    /* display: block; */
-    /* display:flex; */
-    /* flex-direction: row; */
-    /* max-width: 800px; */
-    /* height:50px; */
-    /* margin-top:100px; */
-    /* margin-left:40px;  */
-    /* text-align: center; */
-/* }  */
+   
     hr{
         display: none;
     }
     
-     /* #results{
-        max-width:1000px;
-        display:flex;
-        flex-direction: row; 
-        text-align: center; */
-      /* }  */
-    #results-list{
-        margin-left:100px;
-        width: 1000px;
-        margin: auto;
-        display:flex;
-        flex-direction: row;
-    } 
-    #resultsCheck{
-        margin-top: 5px;
-        margin-bottom: 20px;
-        text-align: center;
-        flex-direction: row;
-    }
 
     body{
-        background-color:orange;
+        background-color:#FFFFFE;
     }
 
     h2,p{
@@ -278,11 +259,7 @@ a{
         margin-left:80px;
         margin-bottom: 70px;
     }
-    /* div label{
-        margin-top: 30px;
-        margin-right: 10px;
-        
-    } */
+    
     #js-form{
         position:absolute;
         padding:60px;
@@ -292,60 +269,7 @@ a{
     .hidden{
         display:none;
     } 
-    /* .languages{
-        color:white;
-        position: absolute;
-        margin-top: 150px;
-        text-align: left;
-    } */
+    
 }
-  /* @media all and (min-width:480px) {
-    body {
-       background-color:orange; */
-      /* style is appended and/or overrided when the screen gets larger */
-     /* }
-  } */
-    
-/* --- Horizaontal Ruler-------------------*/
-
- hr {
-    max-width: 500px;
-    height: 5px;
-    border: solid;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background:black;
-  } 
-  /*
-  hr{
-    height:10px;
-    background-color:black;
-    width:700px;
-    margin: 30px;
-    /*margin-left:-38px;*/
-    
-
   
-/* #js-max-results{
-    color:red;
-} */
-#js-search-term{
-    color:black;
-    width:400px;
-    height:40px;
-}
-#resultsCheck{
-    text-align: center;
-    font-family: cursive;
-    font-size: 25px;
-    margin-left:40px;   
-}
-form >label{
-color:Black;
-background-color:red;
-width:300px;
-border-radius:50%;
-height:auto;
-text-align: center;
-}
 
