@@ -5,7 +5,7 @@
     font-family: sans-serif;
     background-color:#ECECEC; 
 } 
-/* ------------H1--And Form ---------------*/
+/* ------------H1--And Form contents ---------------*/
 h1{ 
     text-align: center; 
     height: 100px;
@@ -45,7 +45,7 @@ h1{
      box-shadow: 3px 3px 3px 3px lightblue; 
    
 }
-
+/*------------group and item for flexbox--------------*/
 
 .group {
     display: flex;
@@ -67,12 +67,7 @@ h1{
     padding:10px;
     border-radius:10px;
     border:2px;
-    /* box-shadow: 3px 3px 3px 3px white;  */
-     /* border:solid; */
-    /* max-width: 445px;
-    height:auto; 
-    margin-top:20px;
-    margin-left: 35px;  */
+    
       
 }
 
@@ -100,20 +95,18 @@ h1{
     height:55px;
     border-radius: 10px;
 }
-.error-message{
-    color:red;
-}
+/*-----------------------display Results area----------*/
 .hidden{
     display:none;
 } 
-
+/*-------------------images---------------------------*/
 img{
 
     width:100%;
     height:auto;
     
 }
-/*----------Anchor a with animation---------------*/
+/*----------html populate elements (display elements) ---------------*/
 a{
     
     background-color:black;
@@ -124,12 +117,14 @@ a{
 }
 
 #title {
+    width:100%;
     color:white;
     font-weight: 70px;
     /* background-color:black; */
 
 }
 #description {
+    width:100%;
     color:white;
     font-weight: 70px;
     /* background-color:black; */
@@ -151,24 +146,26 @@ a{
     margin-bottom: 20px;
     background:black;
   } 
-  
+  /*-------------------*/
 #js-search-term{
     color:black;
     width:100%;
     height:40px;
     border-radius:10px;
 }
-#resultsCheck{
+/*-------------------*/
+/* #resultsCheck{
     text-align: center;
     font-family: cursive;
     font-size: 25px;
     margin-left:40px;   
-}
-label{
+} */
+
+/* label{
 color:black;
 height:auto;
 text-align: center;
-}
+} */
 h2,p{
     text-align:center;
 }
@@ -202,11 +199,14 @@ h2,p{
         align-self:center;
         flex-wrap: wrap;
       }  
-      hr{
-          width:500px;
-          margin:20px;
-          color:black;
-      }
+      /* hr {
+        max-width: 300px;
+        height: 5px;
+        border: solid;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background:black;
+      }  */
     
       #js-form{
         position:absolute;
@@ -250,9 +250,9 @@ h2,p{
 
     }
 
-    hr{
+    /* hr{
         width:100%;
-    }
+    } */
 
     /* .htitle{
         text-align:center;
@@ -267,9 +267,9 @@ h2,p{
     }
 
    
-    hr{
+     hr{
         display: none;
-    }
+    } 
     
 
     body{
@@ -278,6 +278,9 @@ h2,p{
 
     h2,p{
         text-align:center;
+    }
+    h2{
+        text-align: center;
     }
 
     div h1{
